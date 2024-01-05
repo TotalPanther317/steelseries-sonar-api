@@ -11,4 +11,7 @@ This will ONLY work with streamer (for now) because I use streamer mode.
 2. Download Nirsoft's SoundVolumeView from <a href="https://www.nirsoft.net/utils/soundvolumeview-x64.zip)https://www.nirsoft.net/utils/soundvolumeview-x64.zip">here<a> and place it into your folder. It should now look something like this:
    ![Alt text](images/soundvolumeview.png)
 3. Download this repo and unpack it somewhere else than this folder.
-4. Copy the file 'dump_devices.bat' into the folder.
+4. Copy the file 'dump_devices.bat' into the folder, like this:
+   ![Alt text](images/dump.png)
+5. Verify everything is working by running the file from step 4, it should create a new file called 'dump.txt':
+   ![Alt text](images/text_file.png)
