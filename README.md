@@ -6,7 +6,7 @@ A python api for steelseries' sonar software. An advanced form of <a href="https
 This will ONLY work with streamer (for now) because I use streamer mode.
 
 
-##Instalation
+## Installation 
 Create a new folder anywhere you want, it will later be filled with all the files.
 1. Download Nirsoft's SoundVolumeView from <a href="https://www.nirsoft.net/utils/soundvolumeview-x64.zip)https://www.nirsoft.net/utils/soundvolumeview-x64.zip">here<a> and place it into your folder. It should now look something like this: ![Alt text](soundvolumeview.png)
 2. Download this repo and unpack it somewhere else than this folder.
