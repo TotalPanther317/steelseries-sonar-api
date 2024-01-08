@@ -15,9 +15,10 @@ This will ONLY work with streamer (for now) because I use streamer mode.
 5. Copy the file 'dump_devices.bat' into the folder, like this:
 
    ![Alt text](images/dump.png)
-7. Verify everything is working by running the file from step 4, it should create a new file called 'dump.txt':
+6. Verify everything is working by running the file from step 5, it should create a new file called 'dump.txt':
 
    ![Alt text](images/text_file.png)
+7. You can now insert the files 'main.py', 'sonar.py' and 'devices.py' into your folder
 
 ## Configuration 
 
@@ -29,3 +30,6 @@ This will ONLY work with streamer (for now) because I use streamer mode.
 
    ![Alt text](images/soundvolumeview_open.png)
 5. Now check for the first part of your audio devices name ('Lautsprecher'). Look at the one with 'Device' and 'Render' in the following two collumns. The fourth column should include the second part of its name '(Realtek(R) Audio)'. (It is visible in the image from 2. near the bottom)
+6. Piece these together like this: 'Lautsprecher,Device,Render,Realtek(R) Audio'
+7. Open devices.py and navigate to the function 'getSecondary' and location the line 'location = file_text.find(...)'
+8. Now replace the text in the brackets with the String you got out of 6.
