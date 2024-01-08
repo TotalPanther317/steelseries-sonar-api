@@ -23,4 +23,4 @@ This will ONLY work with streamer (for now) because I use streamer mode.
    ![Alt text](images/windows_sound_menu.png)
 2. Start SoundVolumeView.exe It will look like this:
    ![Alt text](images/soundvolumeview_open.png)
-3. Now check for the first part of your audio devices name ('Lautsprecher'). Look at the one with 'Device' and 'Render' in the following two collumns. The fourth column should include the second part of its name '(Realtek(R) Audio)'. (It is visible in the image near the bottom)
+3. Now check for the first part of your audio devices name ('Lautsprecher'). Look at the one with 'Device' and 'Render' in the following two collumns. The fourth column should include the second part of its name '(Realtek(R) Audio)'. (It is visible in the image from 2. near the bottom)
