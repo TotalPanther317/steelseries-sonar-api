@@ -15,3 +15,7 @@ This will ONLY work with streamer (for now) because I use streamer mode.
    ![Alt text](images/dump.png)
 5. Verify everything is working by running the file from step 4, it should create a new file called 'dump.txt':
    ![Alt text](images/text_file.png)
+
+## Configuration 
+
+### Primary and secondary audio devices
