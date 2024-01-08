@@ -2,6 +2,15 @@
 
 A python api for steelseries' sonar software. An advanced form of <a href="https://github.com/Mark7888/steelseries-sonar-py">Mark7888's sonar api<a> including the possibility to change audio devices and use a hardware controller to interface with sonar.
 
+Some kind of usb-midi controller capable of sending controlchange commands is required as a hardware interface.
+
+The device changing function also works without this controller if you just want to use this as an inspiration. However I do not provide a version of the code without the controller implemented as this is the only reason this project exists.
+
+## Requirements
+- Python 3.9 or above
+- rtmidi (pip3 install rtmidi)
+
+
 ## IMPORTANT 
 This will ONLY work with streamer (for now) because I use streamer mode.
 
@@ -20,6 +29,7 @@ This will ONLY work with streamer (for now) because I use streamer mode.
    ![Alt text](images/text_file.png)
 7. You can now insert the files 'main.py', 'sonar.py' and 'devices.py' into your folder
 
+
 ## Configuration 
 
 ### Primary audio device
@@ -33,6 +43,7 @@ This will ONLY work with streamer (for now) because I use streamer mode.
 6. Piece these together like this: 'Lautsprecher,Device,Render,Realtek(R) Audio'
 7. Open devices.py and navigate to the function 'getSecondary' and location the line 'location = file_text.find(...)'
 8. Now replace the text in the brackets with the String you got out of 6.
+
 
 ### Secondary audio device 
 Just repeat the steps for the primary device and use the device you want as a secondary output instead. It will then go into the function 'getSecondary', also into the 'location' variable.
