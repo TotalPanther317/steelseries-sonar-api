@@ -2,14 +2,12 @@
 
 A python api for steelseries' sonar software. An advanced form of <a href="https://github.com/Mark7888/steelseries-sonar-py">Mark7888's sonar api<a> including the possibility to change audio devices and use a hardware controller to interface with sonar.
 
-Some kind of usb-midi controller capable of sending controlchange commands is required as a hardware interface.
-
-The device changing function also works without this controller if you just want to use this as an inspiration. However I do not provide a version of the code without the controller implemented as this is the only reason this project exists.
-
 ## Requirements
 - Python 3.9 or above
 - rtmidi (pip3 install rtmidi)
+- Some kind of usb-midi controller capable of sending controlchange commands is required as a hardware interface.
 
+The device changing function also works without this controller if you just want to use this as an inspiration. However I do not provide a version of the code without the controller implemented as this is the only reason this project exists.
 
 ## IMPORTANT 
 This will ONLY work with streamer (for now) because I use streamer mode.
