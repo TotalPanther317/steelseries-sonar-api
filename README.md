@@ -33,3 +33,6 @@ This will ONLY work with streamer (for now) because I use streamer mode.
 6. Piece these together like this: 'Lautsprecher,Device,Render,Realtek(R) Audio'
 7. Open devices.py and navigate to the function 'getSecondary' and location the line 'location = file_text.find(...)'
 8. Now replace the text in the brackets with the String you got out of 6.
+
+### Secondary audio device 
+Just repeat the steps for the primary device and use the device you want as a secondary output instead. It will then go into the function 'getSecondary', also into the 'location' variable.
