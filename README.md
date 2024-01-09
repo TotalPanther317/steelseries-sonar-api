@@ -50,5 +50,5 @@ Just repeat the steps for the primary device and use the device you want as a se
 ## MIDI Controller
 My midi controller looks something like this, a arduino micro with 10 sliding potentiometers attached to it.
 ![Alt text](images/controller_outside.png)
-![Alt text](images/controller_inside.png)
+![Alt text](images/controller_inside.jpg)
 Unteres bild broken, neu hochladen
