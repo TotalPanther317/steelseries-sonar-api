@@ -2,6 +2,8 @@
 
 A python api for steelseries' sonar software. An advanced form of <a href="https://github.com/Mark7888/steelseries-sonar-py">Mark7888's sonar api<a> including the possibility to change audio devices and use a hardware controller to interface with sonar.
 
+If something does not work properly feel free to open an issue.
+
 ## Requirements
 - Python 3.9 or above
 - rtmidi (pip3 install rtmidi)
@@ -48,6 +50,8 @@ Just repeat the steps for the primary device and use the device you want as a se
 
 
 ## MIDI Controller
+The file 'sonarController.ino' runs on my version of the controller. The hidden analog Inputs on the micro can be found by searching for 'arduino micro pinout'. Ignore the switch on my controller, it is not included in the code.
+
 My midi controller looks something like this, a arduino micro with 10 sliding potentiometers attached to it.
 ![Alt text](images/controller_outside.png)
 ![Alt text](images/contoller_inside.png)
