@@ -8,8 +8,9 @@ def getDump():
     global file, file_text
     os.system(r"dump_devices.bat") #make SoudVolumeView dump everything
 
-    file = open(r"dump.txt", "r") #open the file
-    file_text = str(file.readlines()) #put the file into a variable
+    file = open(r"dump.txt", "r", encoding="utf8") #open the file
+    l = file.readlines()
+    file_text = str(l) #put the file into a variable
 
 #doing some weird stuff, it works somehow
 def getPrimary():
