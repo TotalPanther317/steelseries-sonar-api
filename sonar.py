@@ -69,7 +69,7 @@ class Sonar:
 
         return json.loads(volume_data.text)
     
-    def set_volume_mic(self, channel, volume):
+    def set_streaming_volume(self, channel, volume):
         if channel not in self.channel_names:
             return {"error": True, "message": f"Channel '{channel}' not found!"}
         
@@ -101,3 +101,17 @@ class Sonar:
         url = f'{self.web_server_address}/streamRedirections/monitoring/deviceId/{id}'
         device_data = requests.put(url)
         device_data.text
+
+    def set_streaming_enable(self, channel, enable):
+        url = f'{self.web_server_address}/streamRedirections/streaming/redirections/{channel}/isEnabled/{enable}'
+        requests.put(url)
+
+    def get_streaming_data(self):
+        volume_info_url = self.web_server_address + "/streamRedirections/"
+        volume_data = requests.get(volume_info_url)
+        if volume_data.status_code != 200:
+            print(f'Sonar server not accessible! Status code: {volume_data.status_code}')
+            return {}
+        volume_data_json = json.loads(volume_data.text)
+
+        return volume_data_json
