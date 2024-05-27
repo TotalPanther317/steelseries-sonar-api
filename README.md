@@ -24,7 +24,7 @@ This will ONLY work with streamer (for now) because I use streamer mode.
 5. Copy the file 'dump_devices.bat' into the folder, like this:
 
    ![Alt text](images/dump.png)
-6. Verify everything is working by running the file from step 5, it should create a new file called 'dump.txt':
+6. Verify everything is working by running the file from step 4, it should create a new file called 'dump.txt':
 
    ![Alt text](images/text_file.png)
 7. You can now insert the files 'main.py', 'sonar.py' and 'devices.py' into your folder
