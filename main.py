@@ -1,7 +1,25 @@
 from sonar import Sonar
 from tkinter import *
-import threading, time, rtmidi
+import threading, time, json#, rtmidi
 import devices
+
+try:
+    with open('config.json', 'r') as file:
+        configFile = file.read()
+except:
+    print("config file not found")
+
+configJson = json.loads(configFile)
+
+numberGame = configJson["game"]
+numberGameStream = configJson["gameStream"]
+numberMic = configJson["mic"]
+numberChat = configJson["chat"]
+numberMedia = configJson["media"]
+numberMediaStream = configJson["mediaStream"]
+numberAux = configJson["aux"]
+numberAuxStream = configJson["auxStream"]
+#numberSwitch = configJson["switch"]
 
 sonar = Sonar() #create Sonar object
 tk = Tk() #create Tk object
@@ -42,29 +60,29 @@ def process_midi(midi):
         print('CONTROLLER', midi.getControllerNumber(), midi.getControllerValue())
         converted = ((midi.getControllerValue()*0.79)/100)
         print("converted: ", converted)
-        if midi.getControllerNumber() == 2:
+        if midi.getControllerNumber() == numberChat:
             sonar.set_volume('chatRender', converted)
-        elif midi.getControllerNumber() == 3:
+        elif midi.getControllerNumber() == numberGame:
             sonar.set_volume('game', converted)
-        elif midi.getControllerNumber() == 4:
+        elif midi.getControllerNumber() == numberMedia:
             sonar.set_volume('media', converted)
-        elif midi.getControllerNumber() == 5:
+        elif midi.getControllerNumber() == numberAux:
             sonar.set_volume('aux', converted)
-        elif midi.getControllerNumber() == 0:
+        elif midi.getControllerNumber() == numberMic:
             sonar.set_streaming_volume('chatCapture', converted)
-        elif midi.getControllerNumber() == 7:
+        elif midi.getControllerNumber() == numberGameStream:
             if(converted > 0.01):
                 sonar.set_streaming_enable('game', True)
             else:
                 sonar.set_streaming_enable('game', False)
             sonar.set_streaming_volume('game', converted)
-        elif midi.getControllerNumber() == 8:
+        elif midi.getControllerNumber() == numberMediaStream:
             if(converted > 0.01):
                 sonar.set_streaming_enable('media', True)
             else:
                 sonar.set_streaming_enable('media', False)
             sonar.set_streaming_volume('media', converted)
-        elif midi.getControllerNumber() == 9:
+        elif midi.getControllerNumber() == numberAuxStream:
             if(converted > 0.01):
                 sonar.set_streaming_enable('aux', True)
             else:
