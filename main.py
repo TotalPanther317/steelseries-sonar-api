@@ -3,6 +3,9 @@ from tkinter import *
 import threading, time, rtmidi
 import devices
 
+with open('config.json', 'r') as file:
+    configFile = file.readlines()
+
 sonar = Sonar() #create Sonar object
 tk = Tk() #create Tk object
 midiin = rtmidi.RtMidiIn() #create midi object
