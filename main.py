@@ -1,6 +1,6 @@
 from sonar import Sonar
 from tkinter import *
-import threading, time, json#, rtmidi
+import threading, time, json, rtmidi
 import devices
 
 try:
