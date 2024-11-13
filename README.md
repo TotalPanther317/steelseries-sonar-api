@@ -6,7 +6,7 @@ If something does not work properly feel free to open an issue.
 
 ## Requirements
 - Python 3.9 or above
-- rtmidi (pip3 install rtmidi)
+- rtmidi (pip3 install rtmidi) (might be broken since a new version released and need a manual install)
 - Some kind of usb-midi controller capable of sending controlchange commands is required as a hardware interface.
 
 The device changing function also works without this controller if you just want to use this as an inspiration. However I do not provide a version of the code without the controller implemented as this is the only reason this project exists.
